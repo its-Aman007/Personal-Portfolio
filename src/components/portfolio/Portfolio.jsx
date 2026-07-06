@@ -47,7 +47,7 @@ const data = [
     imageWebp: IMG4webp,
     title: 'Portfolio Website',
     github: 'https://github.com/its-Aman007/Personal-Portfolio-2-main',
-    demo: 'https://amansportfoli01.netlify.app/',
+    demo: 'https://amanportfoli01.netlify.app/',
     tags: ['React', 'React Icons', 'React Hooks'],
     desc: 'This is my personal portfolio website. It is a single page application with dark mode and light mode support.',
   },
