@@ -2,8 +2,6 @@ import { useState } from 'react';
 import { BsArrowDownCircle, BsArrowUpCircle } from 'react-icons/bs';
 import './portfolio.css';
 
-import IMG1 from '../../assets/room_rental.png';
-import IMG1webp from '../../assets/room_rental.webp';
 
 import IMG2 from '../../assets/wemen.png';
 import IMG2webp from '../../assets/wemen.webp';
@@ -20,7 +18,20 @@ import IMG5webp from '../../assets/a1Conveyors.webp';
 import IMG6 from '../../assets/covid-19.png';
 import IMG6webp from '../../assets/covid-19.webp';
 
+import IMG7 from '../../assets/Satya_clinic.png';
+import IMG7webp from '../../assets/Satya_clinic.webp';
+
 const data = [
+  {
+    id: 7,
+    image: IMG7,
+    imageWebp: IMG7webp,
+    title: 'Satya Clinic',
+    github: 'https://github.com/its-Aman007/Satya_Clinic',
+    demo: 'https://satyaclinic.com/',
+    tags: ['React+vite', 'node/express', 'MongoDB'],
+    desc: 'Comprehensive medical care, specialist consultations, preventive health checkups, and advanced treatment solutions tailored for your wellbeing.',
+  },
   {
     id: 6,
     image: IMG6,
@@ -71,22 +82,23 @@ const data = [
     tags: ['React', 'React+vite', 'PyTorch','mongoDB' ],
     desc: 'We-Men is an online shopping website that uses a deep learning model to recommend products to users based on their preferences and browsing history. The model is trained on a large dataset of user interactions and product information, allowing it to make accurate recommendations and enhance the shopping experience.',
   },
-  {
-    id: 1,
-    image: IMG1,
-    imageWebp: IMG1webp,
-    title: 'Room-rental app',
-    github: 'https://github.com/its-Aman007/Rental-project/tree/main',
-    demo: 'https://inquisitive-chebakia-5d7a86.netlify.app/',
-    tags: ['React+vite', 'node/express', 'MongoDB'],
-    desc: 'A full-stack residential apartment rental management system with a modern web interface for residents and powerful admin controls. This project demonstrates a complete solution covering UI, API, database, and containerized deployment.',
-  }
+  // {
+  //   id: 1,
+  //   image: IMG1,
+  //   imageWebp: IMG1webp,
+  //   title: 'Room-rental app',
+  //   github: 'https://github.com/its-Aman007/Rental-project/tree/main',
+  //   demo: 'https://inquisitive-chebakia-5d7a86.netlify.app/',
+  //   tags: ['React+vite', 'node/express', 'MongoDB'],
+  //   desc: 'A full-stack residential apartment rental management system with a modern web interface for residents and powerful admin controls. This project demonstrates a complete solution covering UI, API, database, and containerized deployment.',
+  // }
+  
 
 
 ];
 
 const Portfolio = () => {
-  const [count, setCount] = useState(6);
+  const [count, setCount] = useState(7);
   return (
     <section id='portfolio'>
       <h1 className='small-title'>My Recent Work</h1>
@@ -149,17 +161,17 @@ const Portfolio = () => {
         <button
           onClick={(e) => {
             e.preventDefault();
-            if (count === 6) {
+            if (count === 7) {
               setCount(data.length);
             } else {
-              setCount(6);
+              setCount(7);
             }
           }}
           type='button'
           className='btn btn-dark-variant'
         >
           See{' '}
-          {count === 6 ? (
+          {count === 7 ? (
             <>
               More <BsArrowDownCircle className='moreless' />
             </>
